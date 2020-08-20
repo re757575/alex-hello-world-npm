@@ -33,7 +33,7 @@ export default [
   // `file` and `format` for each target)
   {
     input: pkg.source,
-    external: ['lodash'],
+    external: ['lodash/chunk'],
     output: [
       { file: pkg.main, format: 'cjs' }, // requires
       { file: pkg.module, format: 'es' } // imports

@@ -1,6 +1,6 @@
 {
   "name": "alex-hello-world-npm",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "test",
   "source": "src/index.js",
   "main": "dist/index.cjs.js",
@@ -9,6 +9,7 @@
   "scripts": {
     "build": "rm -rf dist/ && rollup -c rollup.config.js",
     "dev": "rollup -c rollup.config.js -w",
+    "releases":"npm publish",
     "publish": "echo done"
   },
   "files": [
@@ -24,13 +25,15 @@
     "url": "https://github.com/re757575/alex-hello-world-npm/issues"
   },
   "homepage": "https://github.com/re757575/alex-hello-world-npm#readme",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.7.0",
     "eslint-config-airbnb": "^18.2.0",
-    "lodash": "^4.17.20",
     "rollup": "^2.26.4",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",

@@ -12,7 +12,7 @@ Or add this package to your `package.json` file:
 
 ```
 "dependencies": {
-    "alex-hello-world-npm": "1.0.7"
+    "alex-hello-world-npm": "1.0.8"
   }
 ``
 
