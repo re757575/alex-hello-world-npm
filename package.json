@@ -1,22 +1,28 @@
 {
-  "name": "hello-world-npm",
-  "version": "1.0.2",
-  "description": "A simple npm package to demonstrate GitHub Package Registry",
-  "main": "index.js",
+  "name": "alex-hello-world-npm",
+  "version": "1.0.0",
+  "description": "test",
+  "source": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "microbundle",
+    "dev": "microbundle watch"
   },
+  "files": ["dist"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/re757575/hello-world-npm.git"
+    "url": "git+https://github.com/re757575/alex-hello-world-npm.git"
   },
-  "author": "re757575",
+  "author": "alex.dai",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/re757575/hello-world-npm/issues"
+    "url": "https://github.com/re757575/alex-hello-world-npm/issues"
   },
-  "homepage": "https://github.com/re757575/hello-world-npm#readme",
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@re757575"
+  "homepage": "https://github.com/re757575/alex-hello-world-npm#readme",
+  "devDependencies": {
+    "microbundle": "^0.12.3",
+    "lodash": "^4.17.20"
   }
 }
