@@ -1,3 +1,3 @@
-const helloWorld = require('./dist').helloWorld;
+const helloWorld = require('./dist/index.cjs').helloWorld;
 
 helloWorld();

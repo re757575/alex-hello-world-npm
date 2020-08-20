@@ -1,15 +1,19 @@
 {
   "name": "alex-hello-world-npm",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "test",
-  "source": "index.js",
-  "main": "dist/index.umd.js",
+  "source": "src/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch",
-    "publish": "npm publish"
+    "build": "rm -rf dist/ && rollup -c rollup.config.js",
+    "dev": "rollup -c rollup.config.js -w",
+    "publish": "echo done"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/re757575/alex-hello-world-npm.git"
@@ -21,7 +25,17 @@
   },
   "homepage": "https://github.com/re757575/alex-hello-world-npm#readme",
   "devDependencies": {
-    "microbundle": "^0.12.3",
-    "lodash": "^4.17.20"
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "lodash": "^4.17.20",
+    "rollup": "^2.26.4",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-uglify": "^6.0.4"
   }
 }
